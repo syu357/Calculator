@@ -1,4 +1,5 @@
 import arithmetic_op
+import IsNext
 
 print("Select operation.")
 print("1.Add")
@@ -28,26 +29,7 @@ while True:
         elif choice =='4':
             print(num1, "/", num2, "=", arithmetic_op.divide(num1,num2))
             
-
-        # check if user wants another calculation
-        # break the while loop if answer is no
-        while True:
-            next_calculation = input("Let's do next calculation? (yes/no): ")
-
-            if next_calculation.lower() == "no":
-                real_choice = input("Are you sure? (yes/no")
-
-                if real_choice.lower() == "yes":
-                    # 반복 끝 -> 프로그램 종료
-                    break
-                elif real_choice.lower() == "no":
-                    continue
-
-            elif next_calculation.lower() == "yes":
-                continue
-
-            else:
-                print("Invalid Input, Try again.")`
+        IsNext.IsNext() #다음 계산을 계속 할 것인지 물어보는 함수
 
     else:
         print("Invalid Input, Try again.")
