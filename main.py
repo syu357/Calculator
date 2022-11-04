@@ -31,5 +31,5 @@ while True:
             
         IsNext.IsNext() #다음 계산을 계속 할 것인지 물어보는 함수
 
-    else:
+    else: # 1, 2, 3, 4 외 입력
         print("Invalid Input, Try again.")
