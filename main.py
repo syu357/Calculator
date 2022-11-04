@@ -44,5 +44,7 @@ while True:
 
     else: # 1, 2, 3, 4 외 입력
         print("Invalid Input, Try again.")
-    
+        printresult = "Invalid Input: " + str(choice) #콘솔창에 잘못된 입력 결과 출력
+        f.write(printresult + '\n') #계산 로그 파일에 잘못된 입력 결과 저장
+
     f.close() #파일 닫기
