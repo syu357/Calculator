@@ -12,8 +12,10 @@ def multiply(x, y):
 
 #Need to define divide function.
 def divide (x,y):
-    return x/y
-
+    if y != 0
+        return x / y
+    else:
+        return 0
 
 print("Select operation.")
 print("1.Add")
