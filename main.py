@@ -12,6 +12,9 @@ while True:
     # take input from the user
     choice = input("Enter choice(1/2/3): ")
 
+    f = open("C:/Users/윤서연/Desktop/오픈소스소프트웨어개발/중간대체과제/Calc_log.txt", "a") #계산 로그 저장용 파일 open
+
+
     # check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
         num1 = float(input("Enter first number: "))
@@ -33,3 +36,5 @@ while True:
 
     else: # 1, 2, 3, 4 외 입력
         print("Invalid Input, Try again.")
+
+    f.close() #파일 닫기
