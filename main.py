@@ -31,9 +31,23 @@ while True:
 
         # check if user wants another calculation
         # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-            break
+        while True:
+            next_calculation = input("Let's do next calculation? (yes/no): ")
+
+            if next_calculation.lower() == "no":
+                real_choice = input("Are you sure? (yes/no")
+
+                if real_choice.lower() == "yes":
+                    # 반복 끝 -> 프로그램 종료
+                    break
+                elif real_choice.lower() == "no":
+                    continue
+
+            elif next_calculation.lower() == "yes":
+                continue
+
+            else:
+                print("Invalid Input, Try again.")`
 
     else:
-        print("Invalid Input")
+        print("Invalid Input, Try again.")
