@@ -12,24 +12,39 @@ while True:
     # take input from the user
     choice = input("Enter choice(1/2/3): ")
 
-    # check if choice is one of the four options
+    f = open("C:/Users/윤서연/Desktop/오픈소스소프트웨어개발/중간대체과제/Calc_log.txt", "a") #계산 로그 저장용 파일 open
+
     if choice in ('1', '2', '3', '4'):
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
 
         if choice == '1':
-            print(num1, "+", num2, "=", arithmetic_op.add(num1, num2))
+            result = arithmetic_op.add(num1, num2)
+            printresult = str(num1) + " + " + str(num2) + " = " + str(result)
 
         elif choice == '2':
-            print(num1, "-", num2, "=", arithmetic_op.subtract(num1, num2))
+            result = arithmetic_op.subtract(num1, num2)
+            printresult = str(num1) + " - " + str(num2) + " = " + str(result)
 
         elif choice == '3':
-            print(num1, "*", num2, "=", arithmetic_op.multiply(num1, num2))
-            
-        elif choice =='4':
-            print(num1, "/", num2, "=", arithmetic_op.divide(num1,num2))
-            
+            result = arithmetic_op.multiply(num1, num2)
+            printresult = str(num1) + " * " + str(num2) + " = " + str(result)
+
+        elif choice == '4':
+            result = arithmetic_op.divide(num1, num2)
+            if result == 0:
+                printresult = "Can't be divided by zero."
+            else:
+                printresult = str(num1) + " / " + str(num2) + " = " + str(result)
+
+        print(printresult) #콘솔창에 연산 결과 출력
+        f.write(printresult + '\n') #계산 로그 파일에 연산 결과 저장
+
         IsNext.IsNext() #다음 계산을 계속 할 것인지 물어보는 함수
 
     else: # 1, 2, 3, 4 외 입력
         print("Invalid Input, Try again.")
+        printresult = "Invalid Input: " + str(choice) #콘솔창에 잘못된 입력 결과 출력
+        f.write(printresult + '\n') #계산 로그 파일에 잘못된 입력 결과 저장
+
+    f.close() #파일 닫기
