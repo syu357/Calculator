@@ -20,4 +20,4 @@ def IsNext():
 
         else: #잘못된 입력
             print("Invalid Input, Try again. ")
-            continue
+            continue #다시 질문
