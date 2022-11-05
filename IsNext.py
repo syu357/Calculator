@@ -20,6 +20,4 @@ def IsNext():
 
         else: #잘못된 입력
             print("Invalid Input, Try again. ")
-            continue
-
-#다음 계산 진행, 잘못된 입력에 대한 로그(비정상입력) 수정 필요!!
+            continue #다시 질문
