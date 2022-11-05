@@ -17,6 +17,7 @@ while True:
     if choice in ('1', '2', '3', '4'):
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
+        # num1, num2가 float가 아닐 때, 예외처리 필요!!
 
         if choice == '1':
             result = arithmetic_op.add(num1, num2)
