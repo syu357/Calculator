@@ -7,17 +7,21 @@ print("2.Subtract")
 print("3.Multiply")
 print("4.Divide") 
 
-
 while True:
-    # take input from the user
     choice = input("Enter choice(1/2/3): ")
 
     f = open("C:/Users/윤서연/Desktop/오픈소스소프트웨어개발/중간대체과제/Calc_log.txt", "a") #계산 로그 저장용 파일 open
 
     if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        # num1, num2가 float가 아닐 때, 예외처리 필요!!
+    
+        while True:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                break
+            except: #입력이 float가 아닐 경우
+                print("Enter only number.")
+                continue
 
         if choice == '1':
             result = arithmetic_op.add(num1, num2)
