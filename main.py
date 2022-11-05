@@ -12,10 +12,14 @@ while True:
     # take input from the user
     choice = input("Enter choice(1/2/3): ")
 
-    # check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            break
+        except: #입력이 float가 아닐 경우
+            print("Enter only number.")
+            continue
 
         if choice == '1':
             print(num1, "+", num2, "=", arithmetic_op.add(num1, num2))
