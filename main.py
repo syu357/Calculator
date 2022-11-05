@@ -10,7 +10,7 @@ print("4.Divide")
 while True:
     choice = input("Enter choice(1/2/3): ")
 
-    f = open("C:/Users/윤서연/Desktop/오픈소스소프트웨어개발/중간대체과제/Calc_log.txt", "a") #계산 로그 저장용 파일 open
+    f = open("C:/Users/윤서연/Documents/GitHub/calc/Calc_log.txt", "a") #계산 로그 저장용 파일 open
 
     if choice in ('1', '2', '3', '4'):
     
